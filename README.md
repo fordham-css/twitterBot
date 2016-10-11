@@ -3,9 +3,9 @@ twitterbot, optionally with gmail integration
 
 ##Required Libraries
 
-*`pip install python-twitter`: To use the basic twitter bot, you must install the python-twitter library
+* `pip install python-twitter` : To use the basic twitter bot, you must install the python-twitter library
 
-*`pip install google-api-python-client`: To use tha advanced bot, with gmail integration, you must install the python gmail library
+* `pip install google-api-python-client` : To use tha advanced bot, with gmail integration, you must install the python gmail library
 
 
 ##Required Files
