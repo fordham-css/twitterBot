@@ -120,18 +120,17 @@ def main():
 	while True:
 		subjects = get_subjects()
 		for value in subjects:
-			#tweet(value)
-			print(value)
+			tweet(value)
 
 		#tweets before a meeting
 		gmt_time = time.gmtime()
 		if gmt_time[6]==2 and gmt_time.tm_hour == 22:
-			print("Have fun at the CSS meeting tonight") #should we tweet @CSS
+			tweet("Have fun at the CSS meeting tonight") #should we tweet @CSS
 		
 		#sleeps for 30 min
 			#randomize at some point
 		min2sleep = 30
-		time.sleep(5)
+		time.sleep(min2sleep*60)
 
 
 #starts the program
