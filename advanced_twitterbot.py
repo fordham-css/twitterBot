@@ -82,7 +82,7 @@ def get_subjects():
 
 	# gets contense of the inbox
 		#future update: userId could be "me", if we want to integrate other emails at some point.
-	response = service.users().messages().list(userId=user_ID, q='from:eboard.css@gmail.com').execute()
+	response = service.users().messages().list(userId=user_ID, q=search_querry).execute()
 
 	#goes through inbox, and expands (gets more info) on each email
 	messages = []
@@ -93,7 +93,7 @@ def get_subjects():
 		#not needed, the inbox should never be more than one page.
 	while 'nextPageToken' in response:
 		page_token = response['nextPageToken']
-		response = service.users().messages().list(userId=user_ID, q='from:eboard.css@gmail.com', pageToken=page_token).execute()
+		response = service.users().messages().list(userId=user_ID, q=search_querry, pageToken=page_token).execute()
 		messages.extend(response['messages'])
 
 	subjects = []
