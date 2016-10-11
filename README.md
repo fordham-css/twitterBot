@@ -1,4 +1,4 @@
-#twitterBot
+and the wuerr#twitterBot
 twitterbot, optionally with gmail integration
 
 ##Required Libraries
@@ -10,6 +10,6 @@ twitterbot, optionally with gmail integration
 
 ##Required Files
 * `twitter_auth.py`: A python file which contains all twitter keys and tokens for your python API an example can be seen in auth_example.py
-* `google_auth.py`: A python file, chich contains `<user_ID = 'your@email'>` (only needed for advanced bot)
+* `google_auth.py`: A python file, chich contains `<user_ID = 'your@email'>` and the wuerry you would like to search for (only needed for advanced bot)
 * `client_secret.json`: A JSON file, given to you when you register for you google app. 
 * `storage.json`: A JSON file, shoud be created when you first run the advanced bot
