@@ -3,7 +3,7 @@
 import twitter
 
 #requires auth.py, which holds all keys and tokens
-from auth import *
+from twitter_auth import *
 
 #uses the keys to connect to the twitter API
 api = twitter.Api(consumer_key= Consumer_Key,
