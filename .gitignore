@@ -1,2 +1,4 @@
-auth.py
+*_auth.py
 *.pyc
+*.docx
+*.json
