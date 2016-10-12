@@ -12,7 +12,7 @@ api = twitter.Api(consumer_key= Consumer_Key,
 					access_token_secret= Access_Secret)
 
 #Posts the update
-#status = api.PostUpdate("My First Bot Post!")
+status = api.PostUpdate("My First Bot Post!")
 
 #prints the update to the screen
 print(status.text)
