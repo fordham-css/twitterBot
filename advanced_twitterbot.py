@@ -118,6 +118,8 @@ def get_subjects():
 #main function, ran at start, and controls the entire program.
 def main():
 
+	shouldTweet=True
+
 	while True:
 		subjects = get_subjects()
 		for value in subjects:
@@ -125,13 +127,15 @@ def main():
 
 		#tweets before a meeting
 		gmt_time = time.gmtime()
-		if gmt_time[6]==2 and gmt_time.tm_hour == 22:
+		if gmt_time[6]==2 and gmt_time.tm_hour == 22 and shouldTweet:
 			tweet("Have fun at the CSS meeting tonight") #should we tweet @CSS
+			shouldTweet= False
+
+		if gmt_time[6]==3:
+			shouldTweet=True
 		
-		#sleeps for 30 min
-			#randomize at some point
-		min2sleep = 60
-		time.sleep(min2sleep*60)
+
+		time.sleep(30)
 
 
 #starts the program
