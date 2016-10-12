@@ -130,7 +130,7 @@ def main():
 		
 		#sleeps for 30 min
 			#randomize at some point
-		min2sleep = 30
+		min2sleep = 60
 		time.sleep(min2sleep*60)
 
 
