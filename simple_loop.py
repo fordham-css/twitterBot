@@ -2,6 +2,7 @@
 	#pip install python-twitter
 import twitter
 import time
+
 #requires auth.py, which holds all keys and tokens
 from twitter_auth import *
 
