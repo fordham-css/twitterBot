@@ -6,7 +6,7 @@ import time
 from twitter_auth import *
 
 
-count = 1
+count = 0
 while True:
 	#uses the keys to connect to the twitter API
 	api = twitter.Api(consumer_key= Consumer_Key,
@@ -16,8 +16,8 @@ while True:
 	
 	count += 1	
 	#Posts the update
-	status = api.PostUpdate("Post from server number:" + str(count))
+	status = api.PostUpdate("On remote server. This is post number: " + str(count))
 	
 	#prints the update to the screen
 	print(status.text)
-	time.sleep(60)
+	time.sleep(15*60)
