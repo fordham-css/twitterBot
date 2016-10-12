@@ -96,6 +96,7 @@ def get_subjects():
 		response = service.users().messages().list(userId=user_ID, q=search_querry, pageToken=page_token).execute()
 		messages.extend(response['messages'])
 
+	#not clean. Declare somewhere else.
 	subjects = []
 
 	try:
@@ -114,7 +115,7 @@ def get_subjects():
 
 	return subjects
 
-#main function, primarily written by me
+#main function, ran at start, and controls the entire program.
 def main():
 
 	while True:
