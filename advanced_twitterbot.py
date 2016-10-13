@@ -103,11 +103,14 @@ def get_subjects():
 		for message in response['messages']:
 
 
-			entire_message = service.users().messages().trash(userId=user_ID, id=message['id']).execute()	#gets the message
+			entire_message = service.users().messages().get(userId=user_ID, id=message['id']).execute()	#gets the message
 			subject2Tweet = entire_message['payload']['headers'][17]['value']	#goes through the message to find the subject. Not really futureproof, could be expanded.
 
 			subjects.append(subject2Tweet)
+			service.users().messages().trash(userId=user_ID, id=message['id']).execute() #deletes the email
 		print("Printing Subjects")
+		for x in subjects:
+			print(x)
 
 	except KeyError:
 		print("No Messages")
@@ -135,7 +138,7 @@ def main():
 			shouldTweet=True
 		
 
-		time.sleep(30)
+		time.sleep(15)
 
 
 #starts the program
